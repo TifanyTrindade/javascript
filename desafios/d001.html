@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de País</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de País</h1>
+    <p>Digite o nome do país e clique no botão para verificar:</p>
+    <input type="text" id="pais" placeholder="Digite o país aqui">
+    <button onclick="verificarPais()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Função para verificar o país
+        function verificarPais() {
+            // Capturar o valor digitado pelo usuário
+            var pais = document.getElementById('pais').value.trim();
+
+            // Selecionar o elemento onde será exibido o resultado
+            var resultado = document.getElementById('resultado');
+
+            // Verificar o país e exibir a mensagem correspondente
+            if (pais.toLowerCase() === 'brasil') {
+                resultado.innerHTML = `Vivendo em ${pais}<br>Você é Brasileiro!`;
+            } else if (pais !== '') {
+                resultado.innerHTML = `Vivendo em ${pais}<br>Você é Estrangeiro.`;
+            } else {
+                resultado.innerHTML = `Por favor, digite um país válido!`;
+            }
+        }
+    </script>
+</body>
+</html>
