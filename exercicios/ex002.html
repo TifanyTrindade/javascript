@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota do Aluno</title>
+</head>
+<body>
+    <h1>Nota do Aluno</h1>
+    <p>Digite sua Nota:</p>
+    <input type="number" id="notamedia" placeholder="insira sua nota">
+    <button onclick="NotaFinal()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Menor <
+        // Maior >
+        //Recebe = 
+        function NotaFinal() {
+            var nota = parseInt(document.getElementById('notamedia').value);
+            var resultado = document.getElementById('resultado');
+
+            if (isNaN(nota)) {
+            resultado.textContent = 'Por favor, insira uma nota válida.';
+            return;
+        }
+        
+        let classificacao ='';
+
+        if (nota >= 7) {
+            classificacao ='Aprovado'
+        } else if (nota <= 4) {
+            classificacao ='Reprovado'
+        } else if (nota >= 5 && nota <= 6) {
+            classificacao = 'Recuperação'
+        }
+
+        resultado.textContent = `Sua nota é ${nota}. Você está ${classificacao}!`;
+     
+        }
+    </script>
+
+
+</body>
+</html>

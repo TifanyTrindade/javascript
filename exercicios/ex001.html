@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificar Idade</title>
+</head>
+<body>
+    <h1>Classificação por Idade</h1>
+    <p>Digite sua idade:</p>
+    <input type="number" id="idadeinput" placeholder="Insira sua idade">
+    <button onclick="ClassificarIdade()">Classificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Menor <
+        // Maior >
+        //Recebe =
+       function ClassificarIdade() {
+        var idade = parseInt(document.getElementById('idadeinput').value);
+        var resultado = document.getElementById('resultado');
+
+        if (isNaN(idade)) {
+            resultado.textContent = 'Por favor, insira uma idade válida.';
+            return;
+        }
+        
+        let classificacao ='';
+
+        if (idade <= 12) {
+            classificacao = 'Criança';
+        } else if (idade >= 13 && idade < 18) {
+            classificacao ='Adolecente';
+        } else if (idade >= 18) {
+            classificacao ='Adulto';
+        } 
+
+        resultado.textContent = `Você tem ${idade} anos. Você é ${classificacao}!`;
+       }
+    </script>
+</body>
+</html>
