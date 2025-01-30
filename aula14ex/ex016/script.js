@@ -13,7 +13,7 @@ function Contar() {
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
-        if(p <= 0) {
+        if(p <= 0) {s
             window.alert('Passo Inválido! CONSIDERANDO passo 1')
             p = 1
         }
