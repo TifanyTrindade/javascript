@@ -43,6 +43,7 @@ if(n > 0) {
 }
 */
 
+/*
 // CALCULO DE IMC
 
 let peso = 90
@@ -57,4 +58,39 @@ if(imc < 18.5) {
     console.log(`Você está com SOBREPESO!`)
 }  else {
     console.log(`Você está com OBESIDADE`)
+}
+*/
+
+/*
+//VERIFICADOR DE HORA
+
+let h = 10
+
+if(h < 12) {
+    console.log('Bom Dia!')
+} else if (h >= 18) {
+    console.log('Boa Tarde')
+} else {
+    console.log('Boa Noite!')
+}
+*/
+
+/*
+var c = 1
+while(c <= 8) {
+    console.log('Tudo bem?')
+    c++
+}
+*/
+
+/*
+var c = 1
+do{
+    console.log(`Passo ${c}`)
+    c++
+} while(c <= 6)
+ */
+
+for(var c = 1; c <= 20; c++) {
+    console.log(c)
 }
